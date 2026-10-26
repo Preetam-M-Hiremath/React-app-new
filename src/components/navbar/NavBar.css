@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset & Base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#0000;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+    color: #ffffff;
+    background-color: #2b2b2b;
+    background: transparent;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #2b2b2b; /* semi‑transparent */
+  filter: blur(0.2px);
+  z-index: -1; /* behind header content */
+}
+
+.Logo-Section {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Logo-Section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Logo-Section h1 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+.logo {
+    color: rgb(50, 39, 201);
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navlist li a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navlist li a:hover {
+    border-bottom: 2px solid rgb(144, 186, 194);
+}
+
+ul li a{
+    color: #000;
+}
+/* Hamburger Icon */
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+a{
+text-decoration: none;
+}
+/* ===== Mobile Styles ===== */
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        display: none; /* hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        border-radius: 10px;
+        width: 60%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 50px 20px;
+        gap: 20px;
+        transition: all 0.5s ease;
+    }
+
+    .navlist.open {
+        display: flex;
+    }
+
+    .navlist li a {
+        color: black;
+        font-size: 18px;
+        list-style: none;
+    }
+}
+.navlist li  {
+        list-style: none;
+    }
